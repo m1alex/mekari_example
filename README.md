@@ -6,7 +6,7 @@
     cd %PROJECTS PLACE%
     
 ## 2. Install framework
-    composer create-project --prefer-dist laravel/laravel mekari_example "5.2.*"
+    git clone https://github.com/m1alex/mekari_example.git
     
 ## 3. Create own database (mekari_example) in MySQL, create user and grantes
     CREATE DATABASE mekari_example CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
@@ -34,7 +34,8 @@
     sudo chmod -R 0777 storage 
     sudo chmod -R 0777 bootstrap/cache
     
-## 7. Create virtual host in apache, e.g:
+## 7. Create virtual host in apache, e.g.:
+    (You need set your real paths in DocumentRoot, Directory, ErrorLog, CustomLog)
 
     sudo vim /etc/apache2/sites-available/mekari_example.local.conf
 
