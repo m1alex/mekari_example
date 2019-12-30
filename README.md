@@ -5,7 +5,7 @@
 ## 1. Go to projects place
     cd %PROJECTS PLACE%
     
-## 2. Install framework
+## 2. Install application
     git clone https://github.com/m1alex/mekari_example.git
     
 ## 3. Create own database (mekari_example) in MySQL, create user and grantes
@@ -30,9 +30,9 @@
 
 ## 6. Create dirs and access modes for cache&logs
     sudo mkdir storage/logs/httpd
-    sudo chmod -R 0777 storage/logs/httpd
-    sudo chmod -R 0777 storage 
-    sudo chmod -R 0777 bootstrap/cache
+    sudo chmod -R 0755 storage/logs/httpd
+    sudo chmod -R 0755 storage 
+    sudo chmod -R 0755 bootstrap/cache
     
 ## 7. Create virtual host in apache, e.g.:
     (You need set your real paths in DocumentRoot, Directory, ErrorLog, CustomLog)
