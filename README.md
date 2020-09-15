@@ -19,7 +19,7 @@
 ## 4. Update config
     cd mekari_example
     vim .env
-        APP_URL=http://mekari_example.local
+        APP_URL=http://mekariexample.local
         DB_DATABASE=mekari_example
         DB_USERNAME=mekari_example
         DB_PASSWORD=mekari_example
@@ -37,11 +37,11 @@
 ## 7. Create virtual host in apache, e.g.:
     (You need set your real paths in DocumentRoot, Directory, ErrorLog, CustomLog)
 
-    sudo vim /etc/apache2/sites-available/mekari_example.local.conf
+    sudo vim /etc/apache2/sites-available/mekariexample.local.conf
 
         <VirtualHost *:80>
-            ServerName mekari_example.local
-            ServerAlias *.mekari_example.local
+            ServerName mekariexample.local
+            ServerAlias *.mekariexample.local
             ServerAdmin webmaster@localhost
 
             SetEnv LARAVEL_ENV dev
@@ -70,12 +70,12 @@
         </VirtualHost>
 
     apache2ctl configtest
-    sudo a2ensite mekari_example.local.conf
+    sudo a2ensite mekariexample.local.conf
     sudo service apache2 restart
 
     sudo vim /etc/hosts
-        127.0.0.1   mekari_example.local
+        127.0.0.1   mekariexample.local
 
     sudo /etc/init.d/apache2 restart
 
-## 8. Go to local site http://mekari_example.local
+## 8. Go to local site http://mekariexample.local
